@@ -15,3 +15,6 @@ download_buffer_automatic_open_target = OPEN_NEW_BUFFER_BACKGROUND;
 
 require("favicon");
 read_buffer_show_icons = true;
+
+// allow install of extensions from the web
+session_pref("xpinstall.whitelist.required", false);
