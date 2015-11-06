@@ -18,3 +18,9 @@ read_buffer_show_icons = true;
 
 // allow install of extensions from the web
 session_pref("xpinstall.whitelist.required", false);
+
+//Follow new link in buffer
+define_key(content_buffer_normal_keymap, "d", "follow-new-buffer");
+
+// configure the mode line
+add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
