@@ -24,3 +24,8 @@ define_key(content_buffer_normal_keymap, "d", "follow-new-buffer");
 
 // configure the mode line
 add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
+
+// useful page modes
+require('google-search-results');
+require('google-images');
+require('google-maps');
