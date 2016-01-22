@@ -29,3 +29,9 @@ add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
 require('google-search-results');
 require('google-images');
 require('google-maps');
+
+
+define_webjump("gmail", "https://mail.google.com/mail/u/0/"); //primary account
+
+// default webjump
+read_url_handler_list = [read_url_make_default_webjump_handler("google")];
