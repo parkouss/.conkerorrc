@@ -32,6 +32,7 @@ require('google-maps');
 
 
 define_webjump("gmail", "https://mail.google.com/mail/u/0/"); //primary account
+define_webjump("hackernews", "https://news.ycombinator.com/")
 
 // default webjump
 read_url_handler_list = [read_url_make_default_webjump_handler("google")];
