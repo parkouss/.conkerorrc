@@ -3,6 +3,8 @@ require("session.js");
 session_auto_save_auto_load = true;
 session_save_buffer_access_order = true;
 
+// use C-i or C-x x to open the external editor in a text field
+editor_shell_command = "emacsclient -c"
 
 // load urls from the command line in new buffers instead
 // of new windows.
