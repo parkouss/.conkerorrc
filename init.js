@@ -38,3 +38,6 @@ define_webjump("hackernews", "https://news.ycombinator.com/")
 
 // default webjump
 read_url_handler_list = [read_url_make_default_webjump_handler("google")];
+
+define_key(default_global_keymap, "C-x c", "caret-mode");
+
