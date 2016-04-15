@@ -39,5 +39,9 @@ define_webjump("hackernews", "https://news.ycombinator.com/")
 // default webjump
 read_url_handler_list = [read_url_make_default_webjump_handler("google")];
 
+// open pdf within emacs
+content_handlers.set("application/pdf", content_handler_open_default_viewer);
+external_content_handlers.set("application/pdf", "emacsclient -c");
+
 define_key(default_global_keymap, "C-x c", "caret-mode");
 
