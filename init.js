@@ -3,8 +3,10 @@ require("session.js");
 session_auto_save_auto_load = true;
 session_save_buffer_access_order = true;
 
+var emacs = "emacsclient -c -a ''";
+
 // use C-i or C-x x to open the external editor in a text field
-editor_shell_command = "emacsclient -c"
+editor_shell_command = emacs;
 
 // load urls from the command line in new buffers instead
 // of new windows.
@@ -41,11 +43,11 @@ read_url_handler_list = [read_url_make_default_webjump_handler("google")];
 
 // open pdf within emacs
 content_handlers.set("application/pdf", content_handler_open_default_viewer);
-external_content_handlers.set("application/pdf", "emacsclient -c");
+external_content_handlers.set("application/pdf", emacs);
 
 // also open zip files within emacs
 content_handlers.set("application/zip", content_handler_open_default_viewer);
-external_content_handlers.set("application/zip", "emacsclient -c");
+external_content_handlers.set("application/zip", emacs);
 
 define_key(default_global_keymap, "C-x c", "caret-mode");
 
