@@ -44,3 +44,7 @@ define_key(default_global_keymap, "o", "org-store-link");
 if (google_search_results_link_commands) {
     google_search_results_link_commands.push("org-store-link");
 }
+// same on hacker news
+if(hackernews_link_commands) {
+    hackernews_link_commands.push("org-store-link");
+}
