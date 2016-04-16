@@ -39,3 +39,8 @@ interactive(
     }, $browser_object = browser_object_links);
 
 define_key(default_global_keymap, "o", "org-store-link");
+
+// on google, use the same selection defined by google page mode.
+if (google_search_results_link_commands) {
+    google_search_results_link_commands.push("org-store-link");
+}
