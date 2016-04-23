@@ -52,3 +52,6 @@ external_content_handlers.set("application/zip", emacs);
 
 define_key(default_global_keymap, "C-x c", "caret-mode");
 
+// invert C-g and escape bindings
+define_key(content_buffer_normal_keymap, "C-g", "unfocus");
+define_key(content_buffer_normal_keymap, "escape", "stop-loading");
