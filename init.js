@@ -36,6 +36,7 @@ add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
 require('google-search-results');
 require('google-images');
 require('google-maps');
+require('duckduckgo');
 require('hackernews');
 
 
