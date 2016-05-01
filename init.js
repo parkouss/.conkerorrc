@@ -25,6 +25,9 @@ session_pref("xpinstall.whitelist.required", false);
 
 //Follow new link in buffer
 define_key(content_buffer_normal_keymap, "d", "follow-new-buffer");
+// allow n/p without ctrl
+define_key(content_buffer_normal_keymap, "p","cmd_scrollLineUp");
+define_key(content_buffer_normal_keymap, "n","cmd_scrollLineDown");
 
 // configure the mode line
 add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
