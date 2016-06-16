@@ -7,6 +7,10 @@ var kill_buffer_original = kill_buffer_original || kill_buffer;
 
 var killed_buffers = [];
 
+// I don't need ALL buffers to be able to be revived.
+// And it takes lots of memory I assume.
+var killed_buffers_size = 5;
+
 kill_buffer = function (buffer, force) {
     if (buffer.display_uri_string) {
         killed_buffers.push({url: buffer.display_uri_string,
@@ -15,6 +19,10 @@ kill_buffer = function (buffer, force) {
     }
 
     kill_buffer_original(buffer,force);
+
+    if (killed_buffers.length > killed_buffers_size) {
+        killed_buffers.shift();
+    }
 };
 
 interactive("restore-killed-buffer-url", "Loads url from a previously killed buffer",
