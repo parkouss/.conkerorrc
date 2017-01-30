@@ -17,6 +17,9 @@ url_remoting_fn = load_url_in_new_buffer;
 // window, instead of in new windows.
 download_buffer_automatic_open_target = OPEN_NEW_BUFFER_BACKGROUND;
 
+require("key-kill");
+key_kill_mode.test.push(build_url_regexp($domain = "github"));
+
 require("favicon");
 read_buffer_show_icons = true;
 
