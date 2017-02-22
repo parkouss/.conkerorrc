@@ -66,3 +66,8 @@ define_key(content_buffer_normal_keymap, "escape", "stop-loading");
 
 // hide the mode line by default
 mode_line_mode(false);
+define_key(content_buffer_normal_keymap, "C-x m", "mode-line-mode");
+
+load_paths.unshift("chrome://conkeror-contrib/content/");
+require("mode-line-buttons.js");
+mode_line_add_buttons(standard_mode_line_buttons, true);
